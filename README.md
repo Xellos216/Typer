@@ -1,4 +1,4 @@
-## ⚠️ 본 리포지토리는 실험적 기능 및 렌더링 실패 원인 분석 기록용으로 공개되어 있습니다. 아이디어 또는 코드를 무단으로 사용하거나 상업적으로 활용하는 것을 금합니다.
+## ⚠️ 아이디어 또는 코드를 무단으로 사용하거나 상업적으로 활용하는 것을 금합니다.
 
 추가 고지: 본 프로젝트는 실험 목적의 학습 기록으로, MIT 라이선스를 따르되, 
 README.md 상에 명시된 바와 같이 아이디어의 무단 도용 및 상업적 사용은 금지됩니다.
@@ -11,19 +11,18 @@ README.md 상에 명시된 바와 같이 아이디어의 무단 도용 및 상�
 Python3 기초 문법 문제를 반복 타이핑하며 학습하는 CLI 도구입니다. 
 문제 설명과 코드 입력을 CLI 터미널에서 직접 보여주며, 
 코딩 습관과 문법 기억을 동시에 훈련하는 것이 목적입니다.
+이 자료에 포함된 모든 문제는 Programmers에 수록된 Python3 문제입니다.
 
 ---
 
 ## 📂 폴더 구조 예시
 
 ```
-python3-typing-practice/
-│ ├── 01_NumbersDifference/
+Typer/
+│ ├── 01/
 │ │ └── README.md
-│ ├── 02_NumbersMultiply/
-│ ├── 03_GetQuotient/
-│ ├── 04_GetBirthYear/
-│ └── 05_CompareNumbers/
+│ ├── ../
+│ └── 50/
 ├── typer.sh
 └── README.md
 ```
@@ -62,10 +61,6 @@ python3-typing-practice/
 
 ---
 
-좋습니다. 기존 `README.md`에 **프로젝트 업그레이드 계획**을 명시한 섹션을 아래와 같이 추가하면 자연스럽고 일관된 문서 구성이 됩니다.
-
----
-
 ## 🔄 프로젝트 업그레이드 예정 사항 (v2.0)
 
 기존 `typer.sh` 기반 CLI를 Python으로 포팅하여, 보다 폭넓은 운영체제에서 실행 가능하고, `.exe` 형태로도 배포 가능한 학습 도구로 업그레이드할 예정입니다.
@@ -85,8 +80,8 @@ python3-typing-practice/
 ```
 typer-v2.0/
 ├── Problems/
-│   ├── 01\_NumbersDifference/
-│   ├── 02\_NumbersMultiply/
+│   ├── 01/README.md, Explanation.md
+│   ├── 02/README.md, Explanation.md
 │   └── ...
 ├── typer.exe
 └── run.bat (선택, 자동 실행용)
