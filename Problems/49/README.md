@@ -16,7 +16,7 @@
 
 ## 🐍 Python Reference Code
 
-### ✅ `set` + 중첩 for문 사용 (중복 제거 + 정렬)
+### 1. `set` + 중첩 for문 사용 (중복 제거 + 정렬)
 
 ```python
 def solution(numbers):
@@ -27,7 +27,7 @@ def solution(numbers):
     return sorted(result)
 ```
 
-### ✅ 리스트 컴프리헨션 + `set` 사용 (간결함 중심)
+### 2. 리스트 컴프리헨션 + `set` 사용 (간결함 중심)
 
 ```python
 def solution(numbers):

@@ -17,6 +17,15 @@
 
 ## 🐍 Python Reference Code
 
+### 1. 문자열 변환
+
+```python
+def solution(n):
+    return sum(int(d) for d in str(n))
+```
+
+### 2. 수학적 풀이
+
 ```python
 def solution(n):
     answer = 0
@@ -25,3 +34,7 @@ def solution(n):
         n //= 10
     return answer
 ```
+
+
+
+
