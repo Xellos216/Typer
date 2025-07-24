@@ -69,7 +69,7 @@ else
 fi
 
 # 사용자 입력 유도
-echo "✍️  [Enter your code below, then press Ctrl + D to submit]"
+echo -e "✍️  \033[36m[Enter your code below, then press Ctrl + D to submit]\033[0m"
 cat > "$TMP_FILE"
 echo ""
 echo ""
