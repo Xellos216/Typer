@@ -32,12 +32,22 @@ if [ "$MODE" = "explanation" ]; then
   BASE_DIR=$(find "$PROBLEMS_DIR" -maxdepth 1 -type d -name "$PROBLEM_NUM" | head -n 1)
   EXPLAIN_FILE="$BASE_DIR/Explanations.md"
   if [ -f "$EXPLAIN_FILE" ]; then
-    awk '
-      BEGIN { in_code = 0 }
-      /^\`\`\`python/ { in_code = 1; next }
-      /^\`\`\`/ { in_code = 0; next }
-      { print }
-    ' "$EXPLAIN_FILE"
+awk '
+  BEGIN {
+    in_code = 0
+    yellow = "\033[33m"
+    reset = "\033[0m"
+  }
+  /^\`\`\`python/ { in_code = 1; next }
+  /^\`\`\`/ { in_code = 0; next }
+  {
+    if (!in_code && /^\#\# /) {
+      print yellow $0 reset
+    } else {
+      print
+    }
+  }
+' "$EXPLAIN_FILE"
   else
     echo "❌ Explanations.md not found for problem $PROBLEM_NUM"
   fi

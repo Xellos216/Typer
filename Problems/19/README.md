@@ -26,6 +26,7 @@
 ---
 
 ## 🐍 Python Reference Code
+### 1. 수학적 제곱근 활용
 ```python
 def solution(n):
     x = n ** 0.5
@@ -33,4 +34,15 @@ def solution(n):
         return int((x + 1) ** 2)
     else:
         return -1
+```
+
+### 2. math 라이브러리 사용
+```python
+import math
+
+def solution(n):
+    sqrt = math.isqrt(n)
+    if sqrt * sqrt == n:
+        return (sqrt + 1) ** 2
+    return -1
 ```

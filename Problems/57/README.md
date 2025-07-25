@@ -29,7 +29,7 @@ answers = [1, 3, 2, 4, 2]
 
 ## 🐍 Python Reference Code
 
-### ✅ 방법 1: 가장 기본적인 반복문 + if문 방식
+### 1. 가장 기본적인 반복문 + if문 방식
 
 ```python
 def solution(answers):
@@ -53,7 +53,7 @@ def solution(answers):
 
 ---
 
-### ✅ 방법 2: 리스트 컴프리헨션 + zip 방식
+### 2. 리스트 컴프리헨션 + zip 방식
 
 ```python
 def solution(answers):
