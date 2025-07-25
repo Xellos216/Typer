@@ -94,6 +94,7 @@ typer-v2.0/
 이 CLI 도구는 Python 문법 학습을 위해 제작자가 직접 설계하고 구현한 프로젝트입니다.
 - GitHub: [github.com/Xellos216](https://github.com/Xellos216)
 - Version: v1.0 (2025.07.16)
+- Version: v1.5 (2025.07.25)
 
 ---
 
