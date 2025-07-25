@@ -1,10 +1,12 @@
 #Typer v1.5 by Xellos216
 #!/bin/bash
 
+
 # 경로 정의
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROBLEMS_DIR="$SCRIPT_DIR/Problems"
 TMP_FILE="/tmp/typer_input_$$.txt"
+
 
 # 입력 인자가 없을 경우
 if [ -z "$1" ]; then
@@ -12,6 +14,7 @@ if [ -z "$1" ]; then
   echo "📘 Usage: ./typer.sh [problem_number|random]"
   exit 1
 fi
+
 
 # 분기 확인
 if [[ "$1" =~ ^([0-9]{2})(e|x)$ ]]; then
@@ -21,6 +24,7 @@ else
   PROBLEM_NUM="$1"
   MODE="default"
 fi
+
 
 # 풀이 출력
 echo ""
@@ -46,6 +50,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROBLEMS_DIR="$SCRIPT_DIR/Problems"
 TMP_FILE="/tmp/typer_input_$$.txt"
 
+
 # 랜덤 문제 선택 처리
 if [ "$1" = "random" ]; then
   RANDOM_DIR=$(ls -d "$PROBLEMS_DIR"/[0-9][0-9]/ 2>/dev/null | shuf -n1)
@@ -59,14 +64,30 @@ fi
 
 README_FILE="$BASE_DIR/README.md"
 
+
 # 문제 설명 출력
 if [ -f "$README_FILE" ]; then
-  awk '/^## 🧠 Problem/,/^---/' "$README_FILE"
+  awk '
+    BEGIN {
+      CYAN = "\033[35m"
+      RESET = "\033[0m"
+    }
+
+    # 강조 색상 추가 조건
+    /^## 🧠 Problem/    { print CYAN $0 RESET; next }
+    /^### Constraints/  { print CYAN $0 RESET; next }
+    /^### Example/      { print CYAN $0 RESET; next }
+
+    # 기본 출력
+    /^---$/             { print; exit }  # 첫 구분선 전까지만 출력
+    { print }
+  ' "$README_FILE"
   echo ""
 else
   echo "❌ README.md not found in: $BASE_DIR"
   exit 1
 fi
+
 
 # 사용자 입력 유도
 echo -e "✍️  \033[36m[Enter your code below, then press Ctrl + D to submit]\033[0m"
@@ -74,6 +95,7 @@ cat > "$TMP_FILE"
 echo ""
 echo ""
 echo "---"
+
 
 # Reference Code 출력
 echo ""
