@@ -1,14 +1,14 @@
 ## 🔹 set()
-- Creates an **unordered collection of unique elements**.  
-  Useful for fast membership checks and set operations like difference and subtraction.
+- 순서가 없는 고유한 요소들의 컬렉션을 생성합니다.
+- 빠른 포함 여부 확인 및 차집합 연산 등에 유용합니다.
 
 ## 🔹 sorted(iterable)
-- Returns a **new list** containing all elements from the iterable in ascending order.  
-  Guarantees deterministic neighbour search from the lowest student number upward.
+- 반복 가능한 객체의 모든 요소를 오름차순으로 정렬한 새로운 리스트를 반환합니다.
+- 가장 낮은 학생 번호부터 순차적으로 탐색할 수 있도록 결정적인 순서를 보장합니다.
 
 ## 🔹 list.remove(x)
-- Removes the **first occurrence** of `x` from the list / set.  
-  Here it is used on a `set`, which simply discards the element.
+- 리스트 또는 집합에서 x의 첫 번째 등장 요소를 제거합니다.
+- 여기서는 set에 사용되어 해당 요소를 단순히 제거(discard) 하는 역할을 합니다.
 
 ---
 
@@ -24,7 +24,7 @@
    → 대여 가능자·필요자 확정
 2. `real_reserve`를 **오름차순 순회**하며  
    `r − 1` → `r + 1` 순으로 이웃에게 대여 (그리디)  
-   → 한 번 빌려주면 `real_lost`에서 제거
+   → 한 번 빌려주면 `real_lost`에서 제거 
 3. 최종적으로 체육복이 없는 인원 수 = `len(real_lost)`  
    **참여 가능 인원** = `n − len(real_lost)` 반환
 
