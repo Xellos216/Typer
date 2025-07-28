@@ -139,7 +139,6 @@ awk '
   in_code { print }
 ' "$README_FILE"
 
-echo ""
 echo -e "📝 \033[36m[Your Input]\033[0m"
 cat "$TMP_FILE"
 echo ""
