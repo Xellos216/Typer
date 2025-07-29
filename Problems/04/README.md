@@ -1,23 +1,21 @@
 ## 🧠 Problem
-2022년 기준으로 선생님의 나이(`age`)가 주어질 때, 선생님의 출생 연도를 구하는 함수를 작성하시오.
-
-- 나이는 태어난 연도에 1살이며, 매년 1월 1일 기준으로 1살씩 증가합니다.
+정수 `num1`, `num2`가 매개변수로 주어질 때, `num1`을 `num2`로 나눈 몫을 return하는 함수를 작성하시오.
 
 ### Constraints
-- 0 < `age` ≤ 120
+- 0 < `num1`, `num2` < 100
 
 ### Example
-- Input: `age = 40`
-- Output: `1983`
+- Input: `num1 = 10`, `num2 = 5`
+- Output: `2`
 
-- Input: `age = 23`
-- Output: `2000`
+- Input: `num1 = 7`, `num2 = 2`
+- Output: `3`
 
 ---
 
 ## 🐍 Python Reference Code
 
 ```python
-def solution(age):
-    return 2022 - (age - 1)
+def solution(num1, num2):
+    return num1 // num2
 ```

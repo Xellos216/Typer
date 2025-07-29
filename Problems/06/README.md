@@ -1,21 +1,23 @@
 ## 🧠 Problem
-정수 `num1`과 `num2`가 주어질 때, `num1 + num2`의 합을 return하는 함수를 작성하시오.
+2022년 기준으로 선생님의 나이(`age`)가 주어질 때, 선생님의 출생 연도를 구하는 함수를 작성하시오.
+
+- 나이는 태어난 연도에 1살이며, 매년 1월 1일 기준으로 1살씩 증가합니다.
 
 ### Constraints
-- -50,000 ≤ `num1`, `num2` ≤ 50,000
+- 0 < `age` ≤ 120
 
 ### Example
-- Input: `num1 = 2`, `num2 = 3`
-- Output: `5`
+- Input: `age = 40`
+- Output: `1983`
 
-- Input: `num1 = 100`, `num2 = 2`
-- Output: `102`
+- Input: `age = 23`
+- Output: `2000`
 
 ---
 
 ## 🐍 Python Reference Code
 
 ```python
-def solution(num1, num2):
-    return num1 + num2
+def solution(age):
+    return 2022 - (age - 1)
 ```
